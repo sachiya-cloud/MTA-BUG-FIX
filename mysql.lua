@@ -10,18 +10,18 @@
 production = (get( "production_server" ) == "1" or false)
 socket = get( "socket" ) or ""
 
--- connection settings
-hostname = get( "hostname" )
-username = get( "username" )
-password = get( "password" )
-database = get( "database" )
-port = tonumber( get( "port" ) )
+-- connection settings (LemeHost Direct Configured)
+hostname = "51.38.205.167"
+username = "u295779_8JB6NAjclz"
+password = "^DzbA.wl8x^D54vJ+BKZtqn5"
+database = "s295779_sachiya"
+port = 3306
 
-core_hostname = get( "core_hostname" )
-core_username = get( "core_username" )
-core_password = get( "core_password" )
-core_database = get( "core_database" )
-core_port = tonumber( get( "core_port" ) )
+core_hostname = "51.38.205.167"
+core_username = "u295779_8JB6NAjclz"
+core_password = "^DzbA.wl8x^D54vJ+BKZtqn5"
+core_database = "s295779_sachiya"
+core_port = 3306
 
 local dbConns = {}
 
