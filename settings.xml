@@ -1,20 +1,20 @@
 <settings>
-	<setting name="@mysql.production_server" value="PRODUCTION_SERVER" /> <!-- 1 = Live server 0 = Local/Dev server -->
+	<setting name="@mysql.production_server" value="1" /> <!-- 1 = Live server 0 = Local/Dev server -->
 
 	<!-- MySQL -->
-	<setting name="@mysql.socket" value="unix_socket=/var/run/mysqld/mysqld.sock" />
+	<setting name="@mysql.socket" value="" />
 	<!-- MTA DB -->
-	<setting name="@mysql.database" value="MTA_DATABASE_NAME" />
-	<setting name="@mysql.username" value="MTA_DATABASE_USERNAME" />
-	<setting name="@mysql.password" value="MTA_DATABASE_PASSWORD" />
-	<setting name="@mysql.hostname" value="MTA_DATABASE_HOST" />
-	<setting name="@mysql.port" value="MTA_DATABASE_PORT" />
+	<setting name="@mysql.database" value="s295779_sachiya" />
+	<setting name="@mysql.username" value="u295779_8JB6NAjclz" />
+	<setting name="@mysql.password" value="^DzbA.wl8x^D54vJ+BKZtqn5" />
+	<setting name="@mysql.hostname" value="51.38.205.167" />
+	<setting name="@mysql.port" value="3306" />
 	<!-- Core DB -->
-	<setting name="@mysql.core_database" value="CORE_DATABASE_NAME" />
-	<setting name="@mysql.core_username" value="CORE_DATABASE_USERNAME" />
-	<setting name="@mysql.core_password" value="CORE_DATABASE_PASSWORD" />
-	<setting name="@mysql.core_hostname" value="CORE_DATABASE_HOST" />
-	<setting name="@mysql.core_port" value="CORE_DATABASE_PORT" />
+	<setting name="@mysql.core_database" value="s295779_sachiya" />
+	<setting name="@mysql.core_username" value="u295779_8JB6NAjclz" />
+	<setting name="@mysql.core_password" value="^DzbA.wl8x^D54vJ+BKZtqn5" />
+	<setting name="@mysql.core_hostname" value="51.38.205.167" />
+	<setting name="@mysql.core_port" value="3306" />
 
 	<!-- UCP Access -->
 	<setting name="@usercontrolpanel.website_pass" value="WEBSITE_PASSWORD" />
