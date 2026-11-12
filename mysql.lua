@@ -32,7 +32,6 @@ function createConnection(res, db)
 			if eventName then
 				outputDebugString("[MYSQL] createConnection / "..database.." / OK")
 			else
-				connectToDatabase(res) -- Restart the connection for the MySQL Module
 				outputDebugString("[MYSQL] reconnectConnection / "..database.." / OK")
 			end
 		else
@@ -44,7 +43,7 @@ function createConnection(res, db)
 			end
 		end
 		-- create the migrations table if it didn't already exist.
-		createMigrationsTable()
+		pcall(createMigrationsTable)
 	elseif (db and db == "core") and not dbConns.core then
 		dbConns.core = dbConnect("mysql","dbname=".. core_database ..";host="..core_hostname..";port="..core_port..";"..socket, core_username, core_password, "autoreconnect=1")
 		if dbConns.core then
