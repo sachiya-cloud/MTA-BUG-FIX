@@ -8,7 +8,6 @@
 ]]
 -- Production Server
 production = (get( "production_server" ) == "1" or false)
-socket = get( "socket" ) or ""
 
 -- connection settings (LemeHost Direct Configured)
 hostname = "51.38.205.167"
@@ -27,7 +26,7 @@ local dbConns = {}
 
 function createConnection(res, db)
 	if ((db and db == "mta") or not db) and not dbConns.mta then
-		dbConns.mta = dbConnect("mysql","dbname=".. database ..";host="..hostname..";port="..port..";"..socket, username, password, "autoreconnect=1")
+		dbConns.mta = dbConnect("mysql", "dbname="..database..";host="..hostname..";port="..port, username, password, "autoreconnect=1")
 		if dbConns.mta then
 			if eventName then
 				outputDebugString("[MYSQL] createConnection / "..database.." / OK")
@@ -45,7 +44,7 @@ function createConnection(res, db)
 		-- create the migrations table if it didn't already exist.
 		pcall(createMigrationsTable)
 	elseif (db and db == "core") and not dbConns.core then
-		dbConns.core = dbConnect("mysql","dbname=".. core_database ..";host="..core_hostname..";port="..core_port..";"..socket, core_username, core_password, "autoreconnect=1")
+		dbConns.core = dbConnect("mysql", "dbname="..core_database..";host="..core_hostname..";port="..core_port, core_username, core_password, "autoreconnect=1")
 		if dbConns.core then
 			if eventName then
 				outputDebugString("[MYSQL] createConnection / "..core_database.." / OK")
